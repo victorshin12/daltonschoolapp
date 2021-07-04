@@ -1,6 +1,8 @@
 import 'package:daltonschoolapp/constants.dart';
+import 'package:daltonschoolapp/views/about_tab_view.dart';
 import 'package:daltonschoolapp/views/all_tab_view.dart';
 import 'package:daltonschoolapp/views/athletics_tab_view.dart';
+import 'package:daltonschoolapp/views/dates_tab_view.dart';
 import 'package:daltonschoolapp/views/news_tab_view.dart';
 import 'package:flutter/material.dart';
 
@@ -8,7 +10,7 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: 5,
       child: Scaffold(
         appBar: PreferredSize(
           preferredSize: Size.fromHeight(75),
@@ -40,6 +42,8 @@ class HomeView extends StatelessWidget {
                       Tab(text: "All"),
                       Tab(text: "News"),
                       Tab(text: "Athletics"),
+                      Tab(text: "Dates"),
+                      Tab(text: "About"),
                     ],
                   ),
                 ),
@@ -52,6 +56,8 @@ class HomeView extends StatelessWidget {
             AllTabView(),
             NewsTabView(),
             AthleticsTabView(),
+            DatesTabView(),
+            AboutTabView(),
           ],
         ),
       ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'bottomNav.dart';
+import 'ignore/bottomNav.dart';
 
 void main() {
   runApp(MyApp());
@@ -20,5 +20,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-//yo I dont even think its called from the main

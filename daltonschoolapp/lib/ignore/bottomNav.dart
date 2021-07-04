@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import 'views/account_view.dart';
-import 'views/favorite_view.dart';
-import 'views/home_view.dart';
-import 'views/search_view.dart';
+import 'account_view.dart';
+import 'favorite_view.dart';
+import 'home_view.dart';
+import 'search_view.dart';
 
 
 class BottomNav extends StatefulWidget {
@@ -35,27 +35,27 @@ class _BottomNavState extends State<BottomNav> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(child: _bottomNavView.elementAt(_selectedIndex)),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white,
-        currentIndex: _selectedIndex,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        type: BottomNavigationBarType.fixed,
-        onTap: _onItemTapped,
-        items: _navBarList
-            .map((e) => BottomNavigationBarItem(
-                  icon: SvgPicture.asset(
-                    e.icon,
-                    width: 24,  
-                  ),
-                  activeIcon: SvgPicture.asset(
-                    e.activeIcon,
-                    width: 24,
-                  ),
-                  label: Text(e.title).toString(),
-                ))
-            .toList(),
-      ),
+      //bottomNavigationBar: BottomNavigationBar(
+      //  backgroundColor: Colors.white,
+      //  currentIndex: _selectedIndex,
+      //  showSelectedLabels: false,
+      //  showUnselectedLabels: false,
+      //  type: BottomNavigationBarType.fixed,
+      //  onTap: _onItemTapped,
+      //  items: _navBarList
+      //      .map((e) => BottomNavigationBarItem(
+      //            icon: SvgPicture.asset(
+      //              e.icon,
+      //              width: 24,  
+      //            ),
+      //            activeIcon: SvgPicture.asset(
+      //              e.activeIcon,
+      //              width: 24,
+      //            ),
+      //            label: Text(e.title).toString(),
+      //          ))
+      //      .toList(),
+      //),
     );
   }
 }
